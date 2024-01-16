@@ -25,3 +25,6 @@ Networks -- everything to do with network routing, protocols, and infrastructure
 
 ## CMSC-Robotics
 Robotics -- forgot the course number but learned aloooot about turtlebots
+
+## CMSC-ConsumerPrivacy
+Consumer Privacy -- intersection of technology and policy

