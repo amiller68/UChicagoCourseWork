@@ -2,7 +2,7 @@
 This repository represents some of the course work that I completed during my time at UChicago as a CS undergrad
 
 ## CMSC-16100
-Honors Intro to Computer Science I -- haskell haskell hasekll!
+Honors Intro to Computer Science I -- haskell haskell haskell!
 
 ## CMSC-16200
 Honors Intro to ComputerScience II -- Intro to C, data structures, and basic algorithms
@@ -24,4 +24,4 @@ Cryptography -- ciphers, code breaking, and lots of math :)
 Networks -- everything to do with network routing, protocols, and infrastructure
 
 ## CMSC-Robotics
-Robotics -- forgot the course number but learned aloooot about tutlebots
+Robotics -- forgot the course number but learned aloooot about turtlebots
