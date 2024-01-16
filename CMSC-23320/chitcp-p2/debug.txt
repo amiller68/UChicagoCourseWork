@@ -1,0 +1,25 @@
+[10:36:31.131396781]     tcp-socket-0 [S0] SENT 127.0.0.1.49152 > 127.0.0.1.7: Flags [S], seq 12340000, win 4096, length 0
+[10:36:31.131571027]     tcp-socket-0 [S0] CLOSED -> SYN_SENT
+[10:36:31.181856826]         test-tcp [S1] RCVD 127.0.0.1.49152 > 127.0.0.1.7: Flags [S], seq 12340000, win 4096, length 0
+[10:36:31.181912300]   socket-layer-1 [S1] Passive socket has spawned active socket S2
+[10:36:31.182068664]     tcp-socket-2 [S2] SENT 127.0.0.1.7 > 127.0.0.1.49152: Flags [S.], seq 43210000, ack 12340001, win 4096, length 0
+[10:36:31.182124981]     tcp-socket-2 [S2] LISTEN -> SYN_RCVD
+[10:36:31.232356620]         test-tcp [S0] RCVD 127.0.0.1.7 > 127.0.0.1.49152: Flags [S.], seq 43210000, ack 12340001, win 4096, length 0
+[10:36:31.232594538]     tcp-socket-0 [S0] SENT 127.0.0.1.49152 > 127.0.0.1.7: Flags [.], seq 12340001, ack 43210001, win 4096, length 0
+[10:36:31.232766488]     tcp-socket-0 [S0] SYN_SENT -> ESTABLISHED
+[10:36:31.283395474]         test-tcp [S2] RCVD 127.0.0.1.49152 > 127.0.0.1.7: Flags [.], seq 12340001, ack 43210001, win 4096, length 0
+[10:36:31.283606865]     tcp-socket-2 [S2] SYN_RCVD -> ESTABLISHED
+[10:36:31.284441451]     tcp-socket-0 [S0] SENT 127.0.0.1.49152 > 127.0.0.1.7: Flags [.], seq 12340001:12340537, ack 43210001, win 4096, length 536
+[10:36:31.284650576]     tcp-socket-0 [S0] SENT 127.0.0.1.49152 > 127.0.0.1.7: Flags [.], seq 12340537:12341073, ack 43210001, win 4096, length 536
+[10:36:31.334738298]         test-tcp [S2] RCVD 127.0.0.1.49152 > 127.0.0.1.7: Flags [.], seq 12340001:12340537, ack 43210001, win 4096, length 536
+[10:36:31.334821540]         test-tcp [S2] RCVD 127.0.0.1.49152 > 127.0.0.1.7: Flags [.], seq 12340537:12341073, ack 43210001, win 4096, length 536
+[10:36:31.334838504]     tcp-socket-2 [S2] SENT 127.0.0.1.7 > 127.0.0.1.49152: Flags [.], seq 43210001, ack 12340537, win 4096, length 0
+[10:36:31.334918053]     tcp-socket-2 [S2] SENT 127.0.0.1.7 > 127.0.0.1.49152: Flags [.], seq 43210001, ack 12341073, win 4096, length 0
+[10:36:31.334956253]     tcp-socket-2 [S2] SENT 127.0.0.1.7 > 127.0.0.1.49152: Flags [.], seq 43210001, ack 12341609, win 4096, length 0
+[10:36:31.334985775]     tcp-socket-2 [S2] SENT 127.0.0.1.7 > 127.0.0.1.49152: Flags [.], seq 43210001, ack 12342145, win 4096, length 0
+[10:36:31.335015946]     tcp-socket-2 [S2] SENT 127.0.0.1.7 > 127.0.0.1.49152: Flags [.], seq 43210001, ack 12342681, win 4096, length 0
+[10:36:31.335043262]     tcp-socket-2 [S2] SENT 127.0.0.1.7 > 127.0.0.1.49152: Flags [.], seq 43210001, ack 12343217, win 4096, length 0
+[10:36:31.335067395]     tcp-socket-2 [S2] SENT 127.0.0.1.7 > 127.0.0.1.49152: Flags [.], seq 43210001, ack 12343753, win 4096, length 0
+[10:36:31.335090477]     tcp-socket-2 [S2] SENT 127.0.0.1.7 > 127.0.0.1.49152: Flags [.], seq 43210001, ack 12344289, win 4096, length 0
+[10:36:31.335115065]     tcp-socket-2 [S2] SENT 127.0.0.1.7 > 127.0.0.1.49152: Flags [.], seq 43210001, ack 12344825, win 4096, length 0
+[10:36:31.335528333]         test-tcp ~~~~~~~~~ chiTCP is shutting down ~~~~~~~~~

@@ -1,0 +1,29 @@
+worked on this with Shriya
+
+We have this code
+
+-- | Given a function f, compute the sum of the images under f of the elements of a list
+sumf :: Num n => (a -> n) -> [a] -> n
+sumf f [] = 0
+sumf f (c:cs) = f c + sumf f cs
+    
+-- | Square a number
+
+square :: Num n => n -> n
+square x = x^2
+
+And I need to evaluate how Haskell uses this code to create an output for this expression:
+sumf (sumf squares) [[1,2],[3,4]]
+
+So I'll just work through this using the definitons we're given in the code
+
+sumf (sumf squares) [[1,2],[3,4]]
+=> sumf (sumf square) [1,2]:[3,4]
+=> sumf square [1,2] + sumf (sumf square) [[3,4]]
+=> square 1 + sumf square [2] + sumf square [3,4] + sumf (sumf square) []
+=> 1 + square 2 + sumf sqare [] + square 3 + sumf square [4] + 0
+=> 1 + 4 + 0 + 9 + square 4 + sumf square [] + 0
+=> 1 + 4 + 0 + 9 + 16 + 0 + 0
+=> 30
+
+The result is 30!

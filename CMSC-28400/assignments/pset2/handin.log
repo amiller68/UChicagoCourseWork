@@ -1,0 +1,123 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.1.23)  16 OCT 2021 18:14
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**handin.tex
+(./handin.tex
+LaTeX2e <2020-02-02> patch level 2
+L3 programming layer <2020-02-14>
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count167
+\c@section=\count168
+\c@subsection=\count169
+\c@subsubsection=\count170
+\c@paragraph=\count171
+\c@subparagraph=\count172
+\c@figure=\count173
+\c@table=\count174
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count175
+\l__pdf_internal_box=\box45
+)
+(./handin.aux)
+\openout1 = `handin.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 9.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 9.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 9.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 13.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 13.
+
+Overfull \hbox (5.8724pt too wide) in paragraph at lines 16--17
+\OT1/cmr/m/n/10 ing $\OML/cmm/m/it/10 k[] \OMS/cmsy/m/n/10 ^^H \OML/cmm/m/it/10
+ m[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 c$ \OT1/cmr/m/n/10 for some non-zero st
+ring in $\OML/cmm/m/it/10 K$\OT1/cmr/m/n/10 . There-fore $\OML/cmm/m/it/10 Pr\O
+T1/cmr/m/n/10 [\OML/cmm/m/it/10 OPT[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 k; m[]\O
+T1/cmr/m/n/10 ) =
+ []
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 117--121
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--121
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--121
+
+ []
+
+[4]
+Overfull \hbox (22.0706pt too wide) in paragraph at lines 141--142
+[]\OT1/cmr/m/n/10 Therefore $\OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 m[]; m[] \OMS/c
+msy/m/n/10 2 \OML/cmm/m/it/10 M; \OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 c \OMS/cmsy
+/m/n/10 2 \OML/cmm/m/it/10 C; Pr\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 E\OT1/cmr/m/n
+/10 (\OML/cmm/m/it/10 k; k[]; m[]\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 c\OT1/cmr
+/m/n/10 ] = \OML/cmm/m/it/10 Pr\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 E\OT1/cmr/m/n/
+10 (\OML/cmm/m/it/10 k; k[]; m[]\OT1/cmr/m/n/10 ) =
+ []
+
+[5] (./handin.aux) ) 
+Here is how much of TeX's memory you used:
+ 398 strings out of 483107
+ 6565 string characters out of 5964630
+ 240847 words of memory out of 5000000
+ 15493 multiletter control sequences out of 15000+600000
+ 537274 words of font info for 40 fonts, out of 8000000 for 9000
+ 59 hyphenation exceptions out of 8191
+ 25i,8n,19p,288b,244s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/alex/.texlive2019/texmf-var/fonts/pk/ljfour/jknappe
+n/ec/tcrm1000.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmb
+x12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmti10.pfb>
+Output written on handin.pdf (5 pages, 149314 bytes).
+PDF statistics:
+ 77 PDF objects out of 1000 (max. 8388607)
+ 55 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

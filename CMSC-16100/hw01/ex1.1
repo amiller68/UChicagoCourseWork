@@ -1,0 +1,21 @@
+ex1.1.txt
+* Exercise 1.1 Consider the expression (1 :: Integer) + 2 * (3 :: Double). This will cause a type error, because the two different type constraints are inconsistent. One bit of trickiness is that the inconsistency could be revealed either in the analysis of (+) or (*). Provide both analyses.
+
+Running (1 :: Interger) + 2 * (3 :: Double) in Haskell yileds the following result:
+
+<interactive>:2:18: error:
+    • Couldn't match expected type ‘Integer’ with actual type ‘Double’
+    • In the second argument of ‘(+)’, namely ‘2 * (3 :: Double)’
+      In the expression: (1 :: Integer) + 2 * (3 :: Double)
+      In an equation for ‘it’: it = (1 :: Integer) + 2 * (3 :: Double)
+
+Now before I begin analyzing this error I would first like to rephrase the code as "(+) (1 :: Integer) ((*) 2 (3 :: Double))"
+
+Here we see the code broken up neatly into two parts, (1 :: Integer) and (*) 2 (3 :: Double), which I shall now refer to as parts x and y resepdctively. Part y is broken up into two components itself; it is the function (*) performing an operation on 2 and (3 :: Double). I shall refer to these two parts as y1 and y2 respectively.
+
+With that in mind:
+
+The last/overarching function of our code ((+)) is trying to add parts x and y. The problem arises when we look at what types of data are used in parts x and y. In part x we are forcing the number we want to add to be an integer. Part y is more complicated. y1 is a Numeric without a specific type. However we are forcing y2 to be a Double, a specific type. This itself is not a problem as y1 still has the ability to operate with specific Numeric types as it itself is non-specific. Part y itself should then just be as specific as its most specific component. That would be y2 (which is a double) meaning y as a whole should be evaluated as a Double. 
+Now we can see exactly where the error in our code arises. We have told (+) to operate with two peices of data of different and equally specific types of numbers; x an oncly work with other Integers and non-specific numerics and y can only work with other Doubles and non-specific numerics. Therefore they cannot work with eachother. Therefore our code yields an error.
+
+I am aware the assignment required us to analyze how an error could arise from both (+) and (*). However I evaluated part y on its own multiple times and could not find an error arising from (*). So here is the work I could do :/.

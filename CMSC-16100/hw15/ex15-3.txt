@@ -1,0 +1,22 @@
+instance Monad (State s) where
+        ma >>= f = State $ \s ->
+            let (a,t) = runState ma s
+                mb = f a
+                (b,u) = runState mb t
+            in (b,u)
+
+            s
+            |
+   |--------|-------|
+   |      __\/__    |
+   |  a <--| ma |   |
+   |  |    |____|   |
+   |  |       |     |
+   |  |       t     |
+   |  |    ___|___  |
+   |  |--->| f a  | |
+b<-|-------|______| |
+   |___________|____|
+               |
+               \/
+               u

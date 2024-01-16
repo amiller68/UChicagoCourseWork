@@ -1,0 +1,11 @@
+let p = (a v B) -> !a -> B
+a) p[a:= T]
+   (T v B) -> !T -> B
+   T -> F -> B
+   T -> T
+   T
+b) p[a:=F]
+   (F v B) -> !F -> B
+   B -> T -> B
+   B -> B
+   T

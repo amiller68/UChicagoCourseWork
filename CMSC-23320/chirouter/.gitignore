@@ -1,0 +1,9 @@
+*.o
+*.d
+*~
+*.orig
+*.pyc
+/chirouter
+build
+.cache
+nohup.out

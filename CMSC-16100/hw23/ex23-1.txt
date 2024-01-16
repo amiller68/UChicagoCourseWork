@@ -1,0 +1,14 @@
+1. a |- b                 [Hypothesis]
+2. a -> b                 [Deduction Theorem]
+3. b |- y                 [HYP]
+4. b -> y                 [Deduction THM]
+5. a                      [HYP]
+6. b                      [Consequence of 2 and 5]
+7. y                      [Consequence of 4 and 6]
+8. a |- y                 [Consequence of 5 and 7]
+9. a -> y                 [Deduction THM]
+10.(a -> b), (b -> y) |- (a -> y)   [New HYP]
+11.(a -> b) |- (b -> y) -> (a -> y) [Deduction THM]
+12.(a -> b) -> (b -> y) -> (a -> y) [Deduction THM]
+
+It looks like composition.

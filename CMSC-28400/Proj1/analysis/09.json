@@ -1,0 +1,16 @@
+{
+    "metaData": {
+        "ctxt_name": "09",
+        "ctxt": "2f28642b36d321dd3104a5f0e33e2c984f191ca823f9546c4f65778e89ed64ebe1a51ecb077347fa93d1ebafc82d5b6d7a4aa0ac41d1db9cb42ed71ebe48fa391ec525fa3bd02cb6be7cec2f31858c194e5b4e06932624f29677a24146c7517309a78399005e6ca17166b2135bee6e0ae51be1199ea3d36d989c04f126dcde8681fe208b8d4fe5c1c1d86f177e8057f2c13ac2d945576579f3e363aac93706ed431d32e6fed1eef4e256a0e74e4dca37a4ae05abd2728e6e62dfeb20b57b98bbd7496c1e5fe08ba789a68ff77c3561e741038eba8a25d55813baff6b9a9932367d42b64f6d68fad8dce32e3e7a589423528ec4e5fb73d711fd0f8aba62d752bdc496ca6e4bb4ae5c81238f366de82cabe5656a8f1b84554f23f2f11bd215cba1e78c3f516b554e6ca9ec9a49546610df123a6deb3cd7654288641d63bd03a2b82812a71cf5c16e67fe62ad903f6b09f3d0eeafae6b1fa3949c5c40876edc99e94b0f92cf76894dbf16f9539903b32ca7dcf0a99e1a4b5dd8e8dab5f601181845360ef8430a86f7c7c9de857140485af10342e4c231e9c50d87a1300a863a951ff7553f61de476a05b0381647ed81793d67dd348354733eee128979284c32fe5ae2cf938c7076a063a9858766e18b8a",
+        "lc": 926,
+        "default_spacing": 3,
+        "decrypted": false
+    },
+    "analysis": {
+        "oneTimePad": {
+            "key_file": "guesses/0213_key.txt",
+            "best_guess": "admission to one year certificate in french and german language course is beng offered in the college. there are 50 seats in each course. the classes for these courses shall be held three days a week from monday to friday. the days shall be notified later. the tentative time of classes shall be from 7:00 am to 9:00 am.\nthe eligibility for admission is as usual.\nstudents seeking admission in the above certificate courses shall have to apply on an online form.\n"
+        }
+    },
+    "bestGuess": "admission to one year certificate in french and german language course is beng offered in the college. there are 50 seats in each course. the classes for these courses shall be held three days a week from monday to friday. the days shall be notified later. the tentative time of classes shall be from 7:00 am to 9:00 am.\nthe eligibility for admission is as usual.\nstudents seeking admission in the above certificate courses shall have to apply on an online form.\n"
+}

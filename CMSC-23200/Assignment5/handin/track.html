@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Track.Me</title>
+        <meta charset="UTF-8">
+        <script>
+                function track() {
+                         
+                        var xhr = new XMLHttpRequest();
+                        xhr.open('POST', "https://amiller68.borja.tech/sink.php", true);
+                        xhr.withCredentials = true;
+                        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                         
+                        var cook_en = navigator.cookieEnabled;
+                        var pageName = location.href.split("/").slice(-1);
+                        var width = window.innerWidth;
+                        var height = window.innerHeight;
+                        if( navigator.doNotTrack == "1" ) { var dnt = "true"; }
+                        else { var dnt = "false"; }
+                        
+                        var popup = window.open("https://www.google.com/imgres?imgurl=https%3A%2F%2Fs3.amazonaws.com%2Fcdn-origin-etr.akc.org%2Fwp-content%2Fuploads%2F2018%2F05%2F22224952%2Fbeagle-puppy-in-large-cushion-chair.jpg&imgrefurl=https%3A%2F%2Fwww.akc.org%2Fexpert-advice%2Ftraining%2Fleaving-puppy-alone%2F&tbnid=pzXfr5Pw7AwGZM&vet=12ahUKEwi2m9-pg9fnAhWWAJ0JHcovCyYQMygXegQIARBb..i&docid=ViT2Ufdf7SG7CM&w=729&h=486&q=puppy%20pic&client=ubuntu&ved=2ahUKEwi2m9-pg9fnAhWWAJ0JHcovCyYQMygXegQIARBb");
+                        
+                        if (!popup){
+                                var popup_en = "false";
+                        }
+                        else {
+                                var popup_en = "true";
+                                popup.close();
+                        }
+
+                        var fonts_en = "";
+
+                        var def_font_div = document.getElementById("DEF");
+                        var def_style = window.getComputedStyle(def_font_div);
+                        var def_width = parseInt(def_style.getPropertyValue('width'));
+                        var def_height = parseInt(def_style.getPropertyValue('height'));
+
+                        console.log("Def Width: " + def_width);
+                        console.log("Def Height: " + def_height);
+                
+                        var fonts = ["Abyssinica SIL", "DejaVu Sans", "GFS Baskerville", "Liberation Sans", "Roboto"];
+                        var db_fonts = ['ASIL','DVS','GFSB','LS','Rob'];
+                        for (var i = 0; i<5; i++){
+                                var font_div = document.getElementById(db_fonts[i]);
+                                console.log("Testing Font: " + fonts[i]);
+
+                                font_div.style.fontFamily = fonts[i];
+
+                                var new_style = window.getComputedStyle(font_div);
+                                var new_width = parseInt(new_style.getPropertyValue('width'));
+                                                               
+                                var matched = ((new_width != def_width) || (new_height != def_height));
+
+                                if(matched){ fonts_en = fonts_en + db_fonts[i] + " "; }
+
+                        }
+                        
+                        fonts_en = fonts_en.trim();
+                        fonts_en = fonts_en.replace(/ /g, ",");
+
+                                                        
+                        var post_string = "w_size="+width+"X"+height+"&cook_en="+cook_en+"&page="+pageName+"&dnt_en="+dnt+"&pop_en="+popup_en+"&fonts="+fonts_en;
+                        console.log(post_string);
+                        xhr.send(post_string);
+                        console.log("it be sent me matey");
+                };      
+
+        </script>
+    </head>
+    <body onload="track()">
+        <p> Oooooh WEEE! Trackin' Time!</p>
+        <div style="display:inline-block;font-size:20px;" id="DEF">TestingforfontTestingforfont</div>
+        <div style="display:inline-block;font-size:20px;" id="ASIL">TestingforfontTestingforfont</div>
+        <div style="display:inline-block;font-size:20px;" id="DVS">TestingforfontTestingforfont</div>
+        <div style="display:inline-block;font-size:20px;" id="GFSB">TestingforfontTestingforfont</div>
+        <div style="display:inline-block;font-size:20px;" id="LS">TestingforfontTestingforfont</div>
+        <div style="display:inline-block;font-size:20px;" id="Rob">TestingforfontTestingforfont</div>
+    </body>
+</html>

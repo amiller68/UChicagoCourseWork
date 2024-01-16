@@ -1,0 +1,206 @@
+\documentclass[11pt]{article}
+\usepackage{fullpage}
+\usepackage{amsthm}
+
+\usepackage{amsthm,amsmath,amsfonts,amssymb,amstext,enumitem}
+\usepackage{latexsym,ifthen,url,rotating}
+
+\usepackage[usenames,dvipsnames]{color}
+
+% --- -----------------------------------------------------------------
+% --- Document-specific definitions.
+% --- -----------------------------------------------------------------
+
+\newtheorem{problem}{Problem}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+
+\newcommand{\getsr}
+  {{\:\stackrel{\raisebox{-2pt}{${\scriptscriptstyle \hspace{0.2em}\$}$}}
+   {\leftarrow}\:}}
+\newcommand{\points}[1]{\textbf{({#1} pts)}}
+
+\newcommand{\Colon}{\ : \ }
+\newcommand{\st}{\mathsf{state}}
+\newcommand{\msgsp}{\mathcal{M}}
+\newcommand{\keys}{\mathcal{K}}
+\newcommand{\kg}{\mathcal{K}}
+\newcommand{\enc}{\mathcal{E}}
+\newcommand{\decc}{\mathcal{D}}
+\newcommand{\MAC}{\mathrm{MAC}}
+\newcommand{\RMAC}{\mathrm{RMAC}}
+
+\newcommand{\pk}{pk}
+\newcommand{\sk}{sk}
+
+\newcommand{\AES}{\mathsf{AES}}
+
+\newcommand{\algorithm}[1]{\textbf{Alg} {#1}}
+
+\newcommand{\calO}{\mathcal{O}}
+
+\newcommand{\dlog}{\mathrm{dlog}}
+
+\newcommand{\Adv}{\mathbf{Adv}}
+\newcommand{\AdvPRF}[2]{\Adv^{\mathrm{prf}}_{#1}({#2})}
+\newcommand{\AdvCPA}[2]{\Adv^{\mathrm{ind{-}cpa}}_{#1}({#2})}
+\newcommand{\AdvCCA}[2]{\Adv^{\mathrm{ind{-}cca}}_{#1}({#2})}
+\newcommand{\AdvKR}[2]{\Adv^{\mathrm{kr}}_{#1}({#2})}
+\newcommand{\AdvCKR}[2]{\Adv^{\mathrm{ckr}}_{#1}({#2})}
+\newcommand{\AdvRMR}[2]{\Adv^{\mathrm{rmr}}_{#1}({#2})}
+\newcommand{\AdvCR}[2]{\Adv^{\mathrm{cr}}_{#1}({#2})}
+\newcommand{\AdvUFCMA}[2]{\Adv^{\textrm{uf{-}cma}}_{#1}({#2})}
+\newcommand{\AdvDL}[2]{\Adv^{\mathrm{dl}}_{#1}({#2})}
+
+\newcommand{\Exp}{\mathbf{Exp}}
+\newcommand{\ExpOW}[1]{\Exp^{\mathrm{ow}}({#1})}
+\newcommand{\ExpCKR}[2]{\Exp^{\mathrm{ckr}}_{#1}({#2})}
+\newcommand{\ExpRMR}[2]{\Exp^{\mathrm{rmr}}_{#1}({#2})}
+
+\newcommand{\concat}{{\,\|\,}}
+\newcommand{\xor}{\oplus}
+\newcommand{\bits}{\{0,1\}}
+
+\newcommand{\tcolh}{T^{\mathrm{col}}_h}
+\newcommand{\tcolH}{T^{\mathrm{col}}_{H^2}}
+\newcommand{\Hcomb}{H^{1\|2}}
+\newcommand{\Hxor}{H^{1\oplus2}}
+
+\newcommand{\EXP}{\textrm{EXP}}
+\newcommand{\MODEXP}{\textrm{MOD{-}EXP}}
+\newcommand{\ADD}{\textrm{ADD}}
+\newcommand{\MULTIMODEXP}{\textrm{MULTI{-}MOD{-}EXP}}
+\newcommand{\MUL}{\textrm{MUL}}
+\newcommand{\MOD}{\textrm{MOD}}
+
+\newcommand{\GG}{\mathbb{G}}
+\newcommand{\ZZ}{\mathbb{Z}}
+
+% --- -----------------------------------------------------------------
+% --- The document starts here.
+% --- -----------------------------------------------------------------
+\begin{document}
+\sloppy
+
+\noindent 
+CMSC 28400: Introduction to Cryptography, Autumn 2021\\
+University of Chicago\\
+Course Staff: Akshima, David Cash (instructor), Andrew Chu, Alex Hoover
+
+\begin{center}
+\LARGE{\textbf{Problem Set 1}}\\
+    \large{Due in Thursday, October 7 at 11:59pm}
+\end{center}
+
+\vspace{.1in}
+
+\begin{description}
+
+    \item[Collaboration policy.] Please respect the following collaboration
+        policy:  You may discuss problems together in groups of up to four
+        \emph{but you must write up your own solutions. You should never see
+        your collaborators' papers or code.}  At the beginning of your
+        submission, indicate the names of your (1, 2, or 3) collaborators, if
+        any.   You may switch groups between problem sets but not within the
+        same problem set.
+
+    \item[Sources.] Cite any sources you use. Citing lecture, providing
+    readings, or the other free textbooks linked from the course syllabus
+    webpage is allowed. You may use results proved in those sources or in
+    lecture without repeating their proofs.  Using Google, Chegg, or searching
+    for posted solutions from other universities, is not allowed.
+
+    \item[Grading.] Responses to theory problems will be graded for
+        correctness, precision, \emph{and clarity}.  Simple, well-explained
+        proofs are preferred.  Point values of problems vary, and are listed.  
+        You are encouraged to ask for help and advice from the staff in writing
+        up your solutions.
+
+    \item[Submitting your solutions.] Solutions will be accepted on Gradescope.
+    Check Campuswire for instructions.
+
+    You may submit well-lit, clear photographs of handwritten solutions. You may
+    also type up your solutions by modifying the included tex file -- The course
+    staff will be happy to provide support if you choose to learn the Latex
+    typesetting language.
+
+\end{description}
+\hrulefill
+
+\begin{enumerate}
+
+    \item \points{25} Warm-up: Let $\Sigma = \{1,2,3,4,5,6\}$, and let
+        $\pi$ and $\sigma$ be permutations on $\Sigma$ defined by
+
+        \begin{center}
+        \begin{tabular}{cc}
+            \begin{minipage}{2in}
+                \begin{tabular}{c|*{7}c}
+                    $x$      & 1 & 2 & 3 & 4 & 5 & 6 \\ \hline
+                    $\pi(x)$ & 4 & 2 & 1 & 6 & 3 & 5
+                \end{tabular}
+            \end{minipage}
+            and
+            &
+            \begin{minipage}{2in}
+                \begin{tabular}{c|*{7}c}
+                    $x$         & 1 & 2 & 3 & 4 & 5 & 6 \\ \hline
+                    $\sigma(x)$ & 3 & 6 & 1 & 2 & 4 & 5
+                \end{tabular}.
+            \end{minipage}
+        \end{tabular}
+        \end{center}
+        For each part here, you don't need to show any work.
+        \begin{itemize}
+            \item Write each of $\pi$ and $\sigma$ as products of disjoint
+                cycles.
+
+            \item Find $\pi^{-1}$ and $\sigma^{-1}$, written as products
+                of disjoint cycles.
+
+            \item Find $\pi\sigma$ and $\sigma\pi$, written as products
+                of disjoint cycles.
+        \end{itemize}
+
+    \item \points{50} Define the \emph{order of a permutation $\pi$} to be the
+        minimum
+        $k\geq 1$ such that $\pi^k$ is the identity, where $\pi^k$ means
+        $\pi$ composed with itself $k$ times.
+        \begin{enumerate}
+            \item Find the order of a cycle $(a_1\ a_2\ \cdots\ a_t)$.
+            (Explain.)
+            \item Find the order of an arbitrary permutation $\pi$ 
+                in terms of its type. (Explain.)
+        \end{enumerate}
+
+    \item \points{50} Find the inverse of a cycle $(a_1\ a_2\ \cdots\ a_t)$.
+        Use this (or another approach if you prefer) to prove that $\pi^{-1}$
+        has the same type as $\pi$.
+
+    \item \points{25} We have seen that there is a one-to-one correspondence
+        between permutations $\pi$ on a set $\Sigma$ and cycle-partition graphs
+        $G_\pi$ on the vertex set $V=\Sigma$.  Consider now directed graphs on
+        $V=\Sigma$ that correspond to arbitrary functions $f:\Sigma\to\Sigma$
+        (as before, for each $x\in\Sigma$ there is a directed edge from $x$ to
+        $f(x)$).
+            
+        The components of $G_f$ will not be directed cycles when $f$ is not
+        a permutation, but they cannot be arbitrary directed graphs either. 
+        Give a description of the components of $G_f$. [You don't need to prove
+        your answer here; a one-sentence description is fine.]
+
+        We will see more of the graphs $G_f$ later in the course.
+
+    \item \points{50} Rejewski states that the number of reflector permutations
+        on a set $\Sigma$ of size $26$ is
+        \[
+            \frac{26!}{2^{13}13!}.
+        \]
+        Prove this formula by explaining how it counts these permutations.
+
+
+\end{enumerate}
+
+\end{document}
+

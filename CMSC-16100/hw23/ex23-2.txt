@@ -1,0 +1,2 @@
+φ ≡ (α ∨ β) → (α→γ)→(β→γ)→γ
+is similar to the fucntion either :: (a -> c) -> (b -> c) -> Either a b -> c

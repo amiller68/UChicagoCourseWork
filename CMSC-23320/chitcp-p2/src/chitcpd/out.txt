@@ -1,0 +1,209 @@
+[21:58:33.026028071]   DEBUG   socket-layer-0 Assigned socket 0
+[21:58:33.027466705]   DEBUG      unix_server Created new debug monitor for socket 0
+[21:58:33.027535569]   DEBUG   socket-layer-1 Assigned socket 1
+[21:58:33.027584944]   DEBUG      unix_server Created new debug monitor for socket 1
+[21:58:33.027629818]   DEBUG   socket-layer-1 Socket 1 will take port 7
+[21:58:33.027745792]   DEBUG   socket-layer-0 No connection entry found, creating one.
+[21:58:33.029081679]    INFO   network_server TCP connection received from 127.0.0.1:37994
+[21:58:33.029235866]   DEBUG     tcp-socket-0 TCP thread running
+[21:58:33.029247695]   DEBUG     tcp-socket-0 >>> Handling event APPLICATION_CONNECT on state CLOSED
+[21:58:33.029252661]   DEBUG     tcp-socket-0 >>> TCP data BEFORE handling:
+[21:58:33.029258194]   DEBUG     tcp-socket-0    ······················································
+[21:58:33.029262331]   DEBUG     tcp-socket-0                          CLOSED
+[21:58:33.029266231]   DEBUG     tcp-socket-0 
+[21:58:33.029270306]   DEBUG     tcp-socket-0             ISS:    12340000           IRS:           0
+[21:58:33.029274549]   DEBUG     tcp-socket-0         SND.UNA:           0 
+[21:58:33.029278427]   DEBUG     tcp-socket-0         SND.NXT:           0       RCV.NXT:           0 
+[21:58:33.029282407]   DEBUG     tcp-socket-0         SND.WND:           0       RCV.WND:           0 
+[21:58:33.029286384]   DEBUG     tcp-socket-0     Send Buffer:    0 / 4096   Recv Buffer:    0 / 4096
+[21:58:33.029291303]   DEBUG     tcp-socket-0 
+[21:58:33.029295779]   DEBUG     tcp-socket-0        Pending packets:    0    Closing? NO
+[21:58:33.029299804]   DEBUG     tcp-socket-0    ······················································
+[21:58:33.029304774]   DEBUG     tcp-socket-0 See what happens 1
+[21:58:33.029309278]   DEBUG     tcp-socket-0 See what happens 2: create packet
+[21:58:33.029315463]   DEBUG     tcp-socket-0 See what happens 3: set ISS
+[21:58:33.029319990]   DEBUG     tcp-socket-0 See what happens 4: send packet
+[21:58:33.029340186]   DEBUG     tcp-socket-0 See what happens 5: ISS is 12340000
+[21:58:33.029345495] MINIMAL     tcp-socket-0 [S0] CLOSED -> SYN_SENT
+[21:58:33.029352160]   DEBUG     tcp-socket-0 >>> Reached a breakpoint: socket 0, event TCP_STATE_CHANGE
+[21:58:33.029411775]   DEBUG  network-layer-0 Received packet for passive socket 1 (port 7)
+[21:58:33.029422254]   DEBUG  network-layer-0 Enqueueing packet as pending connection in passive socket
+[21:58:33.029433316]   DEBUG   socket-layer-1 Assigned socket 2
+[21:58:33.029438379] MINIMAL   socket-layer-1 [S1] Passive socket has spawned active socket S2
+[21:58:33.029443293]   DEBUG   socket-layer-1 >>> Reached a breakpoint: socket 1, event PENDING_CONNECTION
+[21:58:33.029476382]   DEBUG   socket-layer-1 Added debug monitor for new active socket 2
+[21:58:33.029482975]   DEBUG   socket-layer-1 <<< Exiting breakpoint
+[21:58:33.029504134]   DEBUG     tcp-socket-2 TCP thread running
+[21:58:33.029510132]   DEBUG     tcp-socket-2 >>> Handling event PACKET_ARRIVAL on state LISTEN
+[21:58:33.029514382]   DEBUG     tcp-socket-2 >>> TCP data BEFORE handling:
+[21:58:33.029518361]   DEBUG     tcp-socket-2    ······················································
+[21:58:33.029522308]   DEBUG     tcp-socket-2                          LISTEN
+[21:58:33.029526221]   DEBUG     tcp-socket-2 
+[21:58:33.029530054]   DEBUG     tcp-socket-2             ISS:    12340000           IRS:           0
+[21:58:33.029534459]   DEBUG     tcp-socket-2         SND.UNA:           0 
+[21:58:33.029538433]   DEBUG     tcp-socket-2         SND.NXT:           0       RCV.NXT:           0 
+[21:58:33.029542478]   DEBUG     tcp-socket-2         SND.WND:           0       RCV.WND:           0 
+[21:58:33.029546481]   DEBUG     tcp-socket-2     Send Buffer:    0 / 4096   Recv Buffer:    0 / 4096
+[21:58:33.029551087]   DEBUG     tcp-socket-2 
+[21:58:33.029555083]   DEBUG     tcp-socket-2        Pending packets:    1    Closing? NO
+[21:58:33.029564665]   DEBUG     tcp-socket-2    ······················································
+[21:58:33.029569122]   DEBUG     tcp-socket-2 We call listen on PACKET_ARRIVAL
+[21:58:33.029573120]   DEBUG     tcp-socket-2 We are on state_handle_general LISTEN - let's roll
+[21:58:33.029577095]   DEBUG     tcp-socket-2 header_syn flag was on
+[21:58:33.029589031] MINIMAL     tcp-socket-2 [S2] LISTEN -> SYN_RCVD
+[21:58:33.029595650]   DEBUG     tcp-socket-2 >>> Reached a breakpoint: socket 2, event TCP_STATE_CHANGE
+[21:58:33.029949280]   DEBUG     tcp-socket-2 <<< Exiting breakpoint
+[21:58:33.029963812]   DEBUG     tcp-socket-2 <<< TCP data AFTER handling:
+[21:58:33.029968951]   DEBUG     tcp-socket-2    ······················································
+[21:58:33.029973136]   DEBUG     tcp-socket-2                          SYN_RCVD
+[21:58:33.029977967]   DEBUG     tcp-socket-2 
+[21:58:33.029981792]   DEBUG     tcp-socket-2             ISS:    12340000           IRS:    12340000
+[21:58:33.029986014]   DEBUG     tcp-socket-2         SND.UNA:    12340000 
+[21:58:33.029989943]   DEBUG     tcp-socket-2         SND.NXT:    12340001       RCV.NXT:    12340001 
+[21:58:33.029993950]   DEBUG     tcp-socket-2         SND.WND:           0       RCV.WND:           0 
+[21:58:33.029998005]   DEBUG     tcp-socket-2     Send Buffer:    0 / 4096   Recv Buffer:    0 / 4096
+[21:58:33.030002332]   DEBUG     tcp-socket-2 
+[21:58:33.030006158]   DEBUG     tcp-socket-2        Pending packets:    0    Closing? NO
+[21:58:33.030010174]   DEBUG     tcp-socket-2    ······················································
+[21:58:33.030014080]   DEBUG     tcp-socket-2 <<< Finished handling event PACKET_ARRIVAL on state LISTEN
+[21:58:33.030018152]   DEBUG     tcp-socket-2 <<< New state: SYN_RCVD
+[21:58:33.030051297]   DEBUG     tcp-socket-0 <<< Exiting breakpoint
+[21:58:33.030058119]   DEBUG     tcp-socket-0 See what happens 6: ISS is 12340000
+[21:58:33.030062595]   DEBUG     tcp-socket-0 <<< TCP data AFTER handling:
+[21:58:33.030066574]   DEBUG     tcp-socket-0    ······················································
+[21:58:33.030070444]   DEBUG     tcp-socket-0                          SYN_SENT
+[21:58:33.030074376]   DEBUG     tcp-socket-0 
+[21:58:33.030078164]   DEBUG     tcp-socket-0             ISS:    12340000           IRS:           0
+[21:58:33.030082182]   DEBUG     tcp-socket-0         SND.UNA:    12340000 
+[21:58:33.030086106]   DEBUG     tcp-socket-0         SND.NXT:    12340001       RCV.NXT:           0 
+[21:58:33.030090097]   DEBUG     tcp-socket-0         SND.WND:           0       RCV.WND:           0 
+[21:58:33.030094081]   DEBUG     tcp-socket-0     Send Buffer:    0 / 4096   Recv Buffer:    0 / 4096
+[21:58:33.030098323]   DEBUG     tcp-socket-0 
+[21:58:33.030102154]   DEBUG     tcp-socket-0        Pending packets:    1    Closing? NO
+[21:58:33.030106186]   DEBUG     tcp-socket-0    ······················································
+[21:58:33.030110034]   DEBUG     tcp-socket-0 <<< Finished handling event APPLICATION_CONNECT on state CLOSED
+[21:58:33.030114156]   DEBUG     tcp-socket-0 <<< New state: SYN_SENT
+[21:58:33.030118268]   DEBUG     tcp-socket-0 >>> Handling event PACKET_ARRIVAL on state SYN_SENT
+[21:58:33.030122673]   DEBUG     tcp-socket-0 >>> TCP data BEFORE handling:
+[21:58:33.030126686]   DEBUG     tcp-socket-0    ······················································
+[21:58:33.030130583]   DEBUG     tcp-socket-0                          SYN_SENT
+[21:58:33.030134482]   DEBUG     tcp-socket-0 
+[21:58:33.030138261]   DEBUG     tcp-socket-0             ISS:    12340000           IRS:           0
+[21:58:33.030142270]   DEBUG     tcp-socket-0         SND.UNA:    12340000 
+[21:58:33.030150347]   DEBUG     tcp-socket-0         SND.NXT:    12340001       RCV.NXT:           0 
+[21:58:33.030154846]   DEBUG     tcp-socket-0         SND.WND:           0       RCV.WND:           0 
+[21:58:33.030158871]   DEBUG     tcp-socket-0     Send Buffer:    0 / 4096   Recv Buffer:    0 / 4096
+[21:58:33.030163036]   DEBUG     tcp-socket-0 
+[21:58:33.030166846]   DEBUG     tcp-socket-0        Pending packets:    1    Closing? NO
+[21:58:33.030170778]   DEBUG     tcp-socket-0    ······················································
+[21:58:33.030174622] MINIMAL     tcp-socket-0 WE REACHED STATE HANDLE SYNSENT PACKET ARRIVAL _ NEXT TO DO
+[21:58:33.030178916]   DEBUG     tcp-socket-0 INSIDE SYN_SENT SETTING SND_UNA TO 12340001
+[21:58:33.030182875]   DEBUG     tcp-socket-0 our syn has been acked
+[21:58:33.030196790] MINIMAL     tcp-socket-0 [S0] SYN_SENT -> ESTABLISHED
+[21:58:33.030202691]   DEBUG     tcp-socket-0 >>> Reached a breakpoint: socket 0, event TCP_STATE_CHANGE
+[21:58:33.031894877]   DEBUG     tcp-socket-2 >>> Handling event PACKET_ARRIVAL on state SYN_RCVD
+[21:58:33.031926510]   DEBUG     tcp-socket-2 >>> TCP data BEFORE handling:
+[21:58:33.031931447]   DEBUG     tcp-socket-2    ······················································
+[21:58:33.031935554]   DEBUG     tcp-socket-2                          SYN_RCVD
+[21:58:33.031939758]   DEBUG     tcp-socket-2 
+[21:58:33.031943635]   DEBUG     tcp-socket-2             ISS:    12340000           IRS:    12340000
+[21:58:33.031947782]   DEBUG     tcp-socket-2         SND.UNA:    12340000 
+[21:58:33.031951593]   DEBUG     tcp-socket-2         SND.NXT:    12340001       RCV.NXT:    12340001 
+[21:58:33.031955549]   DEBUG     tcp-socket-2         SND.WND:           0       RCV.WND:           0 
+[21:58:33.031959546]   DEBUG     tcp-socket-2     Send Buffer:    0 / 4096   Recv Buffer:    0 / 4096
+[21:58:33.031963715]   DEBUG     tcp-socket-2 
+[21:58:33.031967550]   DEBUG     tcp-socket-2        Pending packets:    1    Closing? NO
+[21:58:33.031971556]   DEBUG     tcp-socket-2    ······················································
+[21:58:33.031975884]   DEBUG     tcp-socket-2 We call SYN_RCVD on PACKET_ARRIVAL
+[21:58:33.031979861]   DEBUG     tcp-socket-2 rcv_wnd = 0, rcv_nxt = 12340001, packet_len = 0, packet_seq = 12340001
+[21:58:33.031984215]   DEBUG     tcp-socket-2 WE ARE IN THE SECOND SWITCH CASE FOR STATE
+[21:58:33.031988131]   DEBUG     tcp-socket-2 Setting to established state and continuing
+[21:58:33.031991893]   DEBUG     tcp-socket-2 Snd.una is 12340000, snd.nxt is 12340001
+[21:58:33.031995796] MINIMAL     tcp-socket-2 The state is 2 before
+[21:58:33.031999776] MINIMAL     tcp-socket-2 [S2] SYN_RCVD -> ESTABLISHED
+[21:58:33.032016636]   DEBUG     tcp-socket-2 >>> Reached a breakpoint: socket 2, event TCP_STATE_CHANGE
+[21:58:33.032260971]   DEBUG     tcp-socket-0 Debug monitor for socket 0 is dying.
+[21:58:33.032329556]   DEBUG     tcp-socket-0 <<< Exiting breakpoint
+[21:58:33.032336304]   DEBUG     tcp-socket-0 <<< TCP data AFTER handling:
+[21:58:33.032340685]   DEBUG     tcp-socket-0    ······················································
+[21:58:33.032344665]   DEBUG     tcp-socket-0                          ESTABLISHED
+[21:58:33.032348514]   DEBUG     tcp-socket-0 
+[21:58:33.032352229]   DEBUG     tcp-socket-0             ISS:    12340000           IRS:    12340000
+[21:58:33.032356297]   DEBUG     tcp-socket-0         SND.UNA:    12340001 
+[21:58:33.032360144]   DEBUG     tcp-socket-0         SND.NXT:    12340001       RCV.NXT:    12340001 
+[21:58:33.032364099]   DEBUG     tcp-socket-0         SND.WND:           0       RCV.WND:           0 
+[21:58:33.032368053]   DEBUG     tcp-socket-0     Send Buffer:    0 / 4096   Recv Buffer:    0 / 4096
+[21:58:33.032372297]   DEBUG     tcp-socket-0 
+[21:58:33.032380966]   DEBUG     tcp-socket-0        Pending packets:    1    Closing? NO
+[21:58:33.032385487]   DEBUG     tcp-socket-0    ······················································
+[21:58:33.032389359]   DEBUG     tcp-socket-0 <<< Finished handling event PACKET_ARRIVAL on state SYN_SENT
+[21:58:33.032393346]   DEBUG     tcp-socket-0 <<< New state: ESTABLISHED
+[21:58:33.032397421]   DEBUG     tcp-socket-0 >>> Handling event PACKET_ARRIVAL on state ESTABLISHED
+[21:58:33.032401355]   DEBUG     tcp-socket-0 >>> TCP data BEFORE handling:
+[21:58:33.032405158]   DEBUG     tcp-socket-0    ······················································
+[21:58:33.032408916]   DEBUG     tcp-socket-0                          ESTABLISHED
+[21:58:33.032412697]   DEBUG     tcp-socket-0 
+[21:58:33.032416411]   DEBUG     tcp-socket-0             ISS:    12340000           IRS:    12340000
+[21:58:33.032420369]   DEBUG     tcp-socket-0         SND.UNA:    12340001 
+[21:58:33.032424195]   DEBUG     tcp-socket-0         SND.NXT:    12340001       RCV.NXT:    12340001 
+[21:58:33.032428125]   DEBUG     tcp-socket-0         SND.WND:           0       RCV.WND:           0 
+[21:58:33.032432071]   DEBUG     tcp-socket-0     Send Buffer:    0 / 4096   Recv Buffer:    0 / 4096
+[21:58:33.032436177]   DEBUG     tcp-socket-0 
+[21:58:33.032440214]   DEBUG     tcp-socket-0        Pending packets:    1    Closing? NO
+[21:58:33.032444137]   DEBUG     tcp-socket-0    ······················································
+[21:58:33.032448006]   DEBUG     tcp-socket-0 rcv_wnd = 0, rcv_nxt = 12340001, packet_len = 0, packet_seq = 12340000
+[21:58:33.032452201]   DEBUG     tcp-socket-0 PACKET IS NOT ACCEPTABLE
+[21:58:33.032466950]   DEBUG     tcp-socket-0 <<< TCP data AFTER handling:
+[21:58:33.032471995]   DEBUG     tcp-socket-0    ······················································
+[21:58:33.032475896]   DEBUG     tcp-socket-0                          ESTABLISHED
+[21:58:33.032479648]   DEBUG     tcp-socket-0 
+[21:58:33.032483337]   DEBUG     tcp-socket-0             ISS:    12340000           IRS:    12340000
+[21:58:33.032487274]   DEBUG     tcp-socket-0         SND.UNA:    12340001 
+[21:58:33.032491083]   DEBUG     tcp-socket-0         SND.NXT:    12340001       RCV.NXT:    12340001 
+[21:58:33.032495271]   DEBUG     tcp-socket-0         SND.WND:           0       RCV.WND:           0 
+[21:58:33.032499184]   DEBUG     tcp-socket-0     Send Buffer:    0 / 4096   Recv Buffer:    0 / 4096
+[21:58:33.032503253]   DEBUG     tcp-socket-0 
+[21:58:33.032506975]   DEBUG     tcp-socket-0        Pending packets:    0    Closing? NO
+[21:58:33.032510875]   DEBUG     tcp-socket-0    ······················································
+[21:58:33.032514665]   DEBUG     tcp-socket-0 <<< Finished handling event PACKET_ARRIVAL on state ESTABLISHED
+[21:58:33.034371574]   DEBUG         test-tcp Stopping the chiTCP daemon.
+[21:58:33.034396253] MINIMAL         test-tcp ~~~~~~~~~ chiTCP is shutting down ~~~~~~~~~
+[21:58:33.034401289]   DEBUG         test-tcp chiTCP daemon is now in STOPPING state.
+[21:58:33.034405183]   DEBUG         test-tcp Stopping network thread...
+[21:58:33.034505124]   DEBUG   network_server Network thread is exiting.
+[21:58:33.034531386]   DEBUG         test-tcp Stopping server thread...
+[21:58:33.034547679]   DEBUG   socket-layer-0 chiTCP daemon is stopping. Freeing open sockets for this handler...
+[21:58:33.034553152]   DEBUG   socket-layer-0 Freeing socket 0
+[21:58:33.034557518] MINIMAL   socket-layer-0 [S0] ESTABLISHED -> CLOSED
+[21:58:33.034561927]   DEBUG   socket-layer-0 Ignoring breakpoint (socket 0, event TCP_STATE_CHANGE): Server is stopping
+[21:58:33.034570137]   DEBUG     tcp-socket-0 Event received: cleanup
+[21:58:33.034574766]   DEBUG     tcp-socket-0 >>> Handling event CLEANUP on state CLOSED
+[21:58:33.034584652]   DEBUG     tcp-socket-0 >>> TCP data BEFORE handling:
+[21:58:33.034589006]   DEBUG     tcp-socket-0    ······················································
+[21:58:33.034592981]   DEBUG     tcp-socket-0                          CLOSED
+[21:58:33.034596807]   DEBUG     tcp-socket-0 
+[21:58:33.034600525]   DEBUG     tcp-socket-0             ISS:    12340000           IRS:    12340000
+[21:58:33.034604630]   DEBUG     tcp-socket-0         SND.UNA:    12340001 
+[21:58:33.034608459]   DEBUG     tcp-socket-0         SND.NXT:    12340001       RCV.NXT:    12340001 
+[21:58:33.034745095]   DEBUG     tcp-socket-0         SND.WND:           0       RCV.WND:           0 
+[21:58:33.034761494]   DEBUG     tcp-socket-0     Send Buffer:    0 / 4096   Recv Buffer:    0 / 4096
+[21:58:33.034766745]   DEBUG     tcp-socket-0 
+[21:58:33.034770864]   DEBUG     tcp-socket-0        Pending packets:    0    Closing? NO
+[21:58:33.034775038]   DEBUG     tcp-socket-0    ······················································
+[21:58:33.034779567]   DEBUG     tcp-socket-0 <<< TCP data AFTER handling:
+[21:58:33.034783735]   DEBUG     tcp-socket-0    ······················································
+[21:58:33.034787606]   DEBUG     tcp-socket-0                          CLOSED
+[21:58:33.034791444]   DEBUG     tcp-socket-0 
+[21:58:33.034795159]   DEBUG     tcp-socket-0             ISS:    12340000           IRS:    12340000
+[21:58:33.034799119]   DEBUG     tcp-socket-0         SND.UNA:    12340001 
+[21:58:33.034802952]   DEBUG     tcp-socket-0         SND.NXT:    12340001       RCV.NXT:    12340001 
+[21:58:33.034806907]   DEBUG     tcp-socket-0         SND.WND:           0       RCV.WND:           0 
+[21:58:33.034810801]   DEBUG     tcp-socket-0     Send Buffer:    0 / 4096   Recv Buffer:    0 / 4096
+[21:58:33.034814882]   DEBUG     tcp-socket-0 
+[21:58:33.034818573]   DEBUG     tcp-socket-0        Pending packets:    0    Closing? NO
+[21:58:33.034822456]   DEBUG     tcp-socket-0    ······················································
+[21:58:33.034826579]   DEBUG     tcp-socket-0 <<< Finished handling event CLEANUP on state CLOSED
+[21:58:33.034835895]   DEBUG     tcp-socket-0 TCP thread is exiting.
+[21:58:33.034865731]   DEBUG   socket-layer-0 Done freeing open sockets.
+[21:58:33.034871822]   DEBUG   socket-layer-0 Handler is exiting.
+[21:58:33.034914004]   ERROR   socket-layer-4 Not a valid chisocket descriptor: 0

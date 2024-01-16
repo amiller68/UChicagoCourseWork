@@ -1,0 +1,49 @@
+Texts with same length:
+- 1 and 20
+- 2 and 13
+- 9 and 11
+
+Answers:
+01.txt:
+hey alex, you've got to stop reusing that one time pad. the students are onto us. let's switch to a stronger cipher. david
+
+3
+
+4
+
+6.txt
+
+use blackblue ball point pen for filling boxes of the response sheet in the space provided and to darken the circles. 
+this is a multiple choice question exam in which each question is followed by four responses (a) to (d). your task is to choose the correctbest response and mark yourresponse in the response sheet and not in the question paper booklet. 
+take care that you mark only one answer for each question. if more than one answer is given by you for any question, the same will not be evaluated.
+
+11.txt:
+I'm making chocolate chip cookies, possibly the greatest dessert of all time. I had a lot of work to do, and I'm very proud of my chocolate chip cookie. 
+I really wanted a cookie with a crispy edge, a chewy, gooey center, and the right balance between the butterschotchy flavors from vanilla and brown sugar and all the chocolate mix in.
+
+I like using two different kinds of chocolate. I like to fold in milk chocolate and dark chocolate. Chopping some of the chocolate so you get big pieces and then like little smaller bits
+folded in. And very importantly, browing the butter. I like the mix of milk and dark chocolates, because for me, too much dark chocolate is too intense and I don't enjoy it. 
+
+Ingredients: butter, two large eggs, a little baking soda, two tablespoons heavy cream, kosher salt, vanilla extract, granulated sugar, dark brown sugar, all purpose flour, then milk
+chocolate and dark chocolate baking discs.
+
+12
+
+14.txt
+
+the last date for the submission of the above google form is 23 september 2021 
+(thursday), 4:00 pm students are informed to upload all of the following documents along with their online application form 
+
+1)passport size photograph 
+2)fee receipt for students 
+3)selfattested copy of degree 
+
+separate forms need to be filled for each italian and japanese course as per choice. the approved candidates will be required to submit the fees within three days from the publication of the list on the college website.
+
+16.txt
+Over the last few years, the game has really suffered from player power creep. As a consecuence of trying to make compelling content, each expansion we release either gives players
+more axes on which to improve their character, more effective skills to use, or ways to craft better and more powerful items. Measuring from closed beta to now, this expansion is our
+30th release. The amount of power creep varies per release of course, with systems like classes providing what, like 20? 30? 40 power creep at once. Like with compound interest, it would
+only take 8 more player power per expansion from new items, crafting, character systems, item accuisition opportunities and new skills for player power to grow tenfold since the game
+has been out. And tenfold is roughly what we measure the increase in player power to be. We may nerf the most outofhand cases every launch, but we're only reducing them back to close to 
+the new baseline.

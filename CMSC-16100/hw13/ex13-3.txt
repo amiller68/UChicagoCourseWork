@@ -1,0 +1,6 @@
+Either s t is * -> * -> *
+(Assuming no constraints on s or t).
+Monoids are * -> *.
+Therefore Either is not a part of Monoid.
+In addition, even if one were to put constraints on the types of Either,
+it would be made obsolete by the qualities of Alternative.

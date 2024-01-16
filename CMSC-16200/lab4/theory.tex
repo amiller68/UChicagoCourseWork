@@ -1,0 +1,77 @@
+\newcommand{\labname}{Lab 4}
+\documentclass[11pt]{article}
+\usepackage[left=1in, right=1in, top=1in, bottom=1in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+
+% TODO: CHANGE THESE
+\newcommand{\myname}{Alex Miller} % Full Name
+\newcommand{\mycnetid}{amiller68} % CNetID
+
+% header
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{CS 162 \labname}
+\chead{\myname{} (\mycnetid)}
+\rhead{Page \thepage{} of \pageref{mylastpagelabel}}
+
+% document starts
+\begin{document}
+
+\paragraph{Task 8.1}
+TRUE. Kruskal's algorithm works by sorting edges in increasing order based on edge weight. The sign of those weights does not affect the order they are placed in. Therefore the sign of an edge weight does not affect how that edge gets sorted. Therefore negative edge weight are allowed
+\paragraph{Task 8.2}
+TRUE. Negating the edge weights of a graph and sorting edges by edge weight in increasing order yields the same order of edges as sorting the edges of a graph by edge weight in decreasing order. This order of edges is the order of edges for finding a maximum spanning tree. Also we're allowed to have negative edge weights. Therefore negating the edge weights of a graph and performing a minimum spanning tree algorithm yield a maximum spanning tree.
+
+\paragraph{Task 8.3}
+FALSE. Counter Example: an undirected connected graph with one edge. The heaviest edge is the only edge in the graph and must be in the minimum spanning tree.
+
+\paragraph{Task 9.1} Given: \{ A, B, C, X, H, M \}
+\\The Rest:
+\\\{ A, B, M, X, H, C \}
+\\\{ A, B, M, H, X, C \}
+\\\{ A, M, H, X, B, C \}
+\\\{ A, M, X, H, B, C \}
+
+\paragraph{Task 10.1}
+In the first loop, percolate\_up is called n times. Each successive time percolate\_up is called the run time of the function increases, as it grows to include more and more indexes in its paths. The longest path an array value must travel is log(x), where x is the number of its index. Therefore the complexity of the first loop is the integral of log(x)dx from x=1 to x=n, giving. This gives the first loop a ru time of O(nlogn-n) which is really O(nlgn) 
+\\In the second loop, percolate\_down is called n times. The first time it is called the run time complexity of percolate\_down n-1. Each consecutive time it is called the run time of complexity percolate\_down decreases by 1. Therefore the total run time complexity of the second loop is proportional to the integral of (log(n-x))dx from x=0 to x=n. This gives the second loop a run time complexity of O(nlogn-n) which is really O(nlogn).
+\\The overall complexity of this version of heapsort is O(2nlogn) which is really O(nlogn)
+
+\paragraph{Task 11.1}
+\\Hi there, I hope you're having a nice day! My answer is on the next page.
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}[]
+	\begin{tabular}{|l|l|l|}
+		\hline
+		Time Step & Vertices Visited so Far                                        & State of Priority Queue \\ \hline
+		0         & \multicolumn{1}{c|}{--}                                        & (0, s)                  \\ \hline
+		1         & (0, s)                                                         & (1, a), (2, b), (3, c)  \\ \hline
+		2         & (0, s), (1, a)                                                 & (2, b), (3, c), (4,f)   \\ \hline
+		3         & (0, s), (1, a), (2, b)                                         & (3, e), (3, c), (4, f)  \\ \hline
+		4         & (0, s), (1, a), (2, b), (3, e)                                 & (3, c), (4, f)          \\ \hline
+		5         & (0, s), (1, a), (2, b), (3, e), (3, c)                         & (4, f), (8, f)          \\ \hline
+		6         & (0, s), (1, a), (2, b), (3, e), (3, c), (4, f)                 & (6, h), (8, f), (10, g) \\ \hline
+		7         & (0, s), (1, a), (2, b), (3, e), (3, c), (4, f), (6, h)         & (8, f), (9, g), (10, g) \\ \hline
+		8         & (0, s), (1, a), (2, b), (3, e), (3, c), (4, f), (6, h)         & (9, g), (10, g)         \\ \hline
+		9         & (0, s), (1, a), (2, b), (3, e), (3, c), (4, f), (6, h), (9, g) & (10, g)                 \\ \hline
+		10        & (0, s), (1, a), (2, b), (3, e), (3, c), (4, f), (6, h), (9, g) & ---                     \\ \hline
+	\end{tabular}
+\end{table}
+
+
+% Answer for Task XX goes in here.
+
+
+
+
+
+
+
+
+% This label is used in the header to keep track of the page count.
+\label{mylastpagelabel}
+
+\end{document}

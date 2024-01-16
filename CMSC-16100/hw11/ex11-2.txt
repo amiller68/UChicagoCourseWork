@@ -1,0 +1,2 @@
+The first method cycles through the given list twice and returns a concatonated list of two of the given list
+the second method cycles accesses the list three times, and returns a list that is the concatonation of each element of the given list replicated twice

@@ -1,0 +1,16 @@
+{
+    "metaData": {
+        "ctxt_name": "13",
+        "ctxt": "2429682c36802ac03050b9fab17d62950a0e0ba07df95f6859317a8185ea25f6eaa51685577954f19892e0fdc830576d7241f2ab55d382d0e4799c4bee16ae2f518a3afd3bc12cb1a22efa227f8dca565c554e54953b67f79124a25a039753680deb8990451a39b96023f90213a33c0da05aa65c88a8927b8ac502f168dc9f8487ba63888d5efecb81d63b177e805cffc469d3d953192377f5b772acc82d0daa001329b4ecc2f4b5e557aee5021ecb3aeba90ce7df3cda7671cfa220a67284ba9208240c1af281f4cfa685f9393178e04b05d7fc9223925615f3ef7882de7c2b7b40b64a607ee79f8ffc26267e589e2f01c0defffb619254ed4783fb70db52e090c2c37d02a1bf5b9a2cdb3869e279afa2287fc3158c105f6fe4e71ad24689abaf993b5825174a6cbdfb994d1533468a026a6df468836504913c4227f542bcff4603bc59a2c5702efc6da996217653aa83e1aebb271be7989b4b139a76dd99f35d4e87d932dc4ea616fb18e050b03cb1dcbeae88544c18dfe2d0b0b1401718083912f95e0dc8b8c0879c9e74470155f44c55ef8672fed21a81a937088e3d835efa592f33cb4e7042ab24040beed7742e31dd618554233aff0cc563615735bb48ac8e92863c6bbc63e7808034e2c0f4301190173f5b0f",
+        "lc": 940,
+        "default_spacing": 0,
+        "decrypted": false
+    },
+    "analysis": {
+        "oneTimePad": {
+            "key_file": "guesses/0213_key.txt",
+            "best_guess": "jeans brother, henri, had died in a plane crash on july 19, 1916, just north of the cyclists path on july 9th, between bayonne and luchon. he had been attending an aviation school in pau, where he was receiving flight training along with his unit, the first aviation group. planes were by then a reliable part of both sides war effort. single and two seated planes were sent back and forth on bombing and reconnaissance flights over european cities and trench networks. "
+        }
+    },
+    "bestGuess": "jeans brother, henri, had died in a plane crash on july 19, 1916, just north of the cyclists path on july 9th, between bayonne and luchon. he had been attending an aviation school in pau, where he was receiving flight training along with his unit, the first aviation group. planes were by then a reliable part of both sides war effort. single and two seated planes were sent back and forth on bombing and reconnaissance flights over european cities and trench networks. "
+}

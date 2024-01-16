@@ -1,0 +1,69 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+#include <assert.h>
+#include "cyclic.h"
+
+int main(int argc, char **argv) {
+    if (argc != 2) {
+        fprintf(stderr, "Usage: ./cyclic <k>\n");
+        return 1;
+    }
+    // Extract information from command line
+    int k = atoi(argv[1]);
+    // Begin of tests
+    assert(countDigits(123) == 3);
+    assert(isFullyRepeated(123123) == true);
+    assert(isFullyRepeated(12345123) == false);
+    assert(isFullyRepeated(333) == true);
+    assert(rightRotateDigit(12345, 2) == 45123);
+    assert(leftRotateDigit(12345, 2) == 34512);
+    assert(isCyclicBad(142857) == true);
+    assert(isPrime(2) == true);
+    assert(isPrime(15) == false);
+    unsigned int *test=malloc(5*sizeof(unsigned int));
+	for(int i=0; i<5; i++){unsigned int fill=5-i; test[i]=fill;}
+	//int size = sizeof(*test)/sizeof(unsigned int);
+	//printf("test is %d indices long\n", size);
+	unsigned int eh1= 12345;
+	unsigned long long int eh = 12345;
+	assert(eh==eh1);
+	int eh2 = 5;
+	int eh3= eh%10;
+	assert(eh2==eh3);
+	assert(numToList(eh, test, 5));
+	printf("numToList work\n");
+//	for(int i=0; i<5; i++){printf("%d\n", test[i]);}
+//	shiftArray(test, 5);
+//	for(int i=0; i<5; i++){printf("%d\n", test[i]);}
+//    shiftArray(test, 5);
+    for(int i=0; i<5; i++){printf("%d\n", test[i]);}
+	unsigned int eh5 = 23451;
+	unsigned int eh6 = 1234;
+	unsigned int eh7 = 12346;
+	unsigned int eh8 = 13245;
+	printf("%d\n", eh5);
+	assert(numToPerms(eh5, test, 5));
+    assert(!(numToPerms(eh6, test, 5)));
+    assert(!(numToPerms(eh7, test, 5)));
+    assert(!(numToPerms(eh8, test, 5)));
+	printf("numToPerms Works\n");
+	unsigned long long int eh9 = 142857;
+	assert(isCyclic(eh9));
+	unsigned long long int eh10= 23;
+	unsigned long long int eh11=52631578947368421;
+	unsigned long long int eh13 = 588235294117647;
+	unsigned long long int eh14 = 588235294117641;
+	unsigned long long int eh12 = 123456;
+	assert(!(isCyclic(eh10)));
+	assert(isCyclic(eh11));
+	assert(!(isCyclic(eh12)));
+	assert(isCyclic(eh13));
+	assert(!(isCyclic(eh14)));
+	printf("isCyclic works!\n");
+	assert(kthCyclic(0, 0) == 7); // for 142857
+//	assert(kthCyclic(2, 0) == 17); // for 0588235294117647
+    // End of tests
+//    kthCyclic(k, 1); // Print cyclic number to stdout
+    return 0;
+}

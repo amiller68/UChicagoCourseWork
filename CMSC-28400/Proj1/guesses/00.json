@@ -1,0 +1,11 @@
+{
+  "_comment": "Use this format to construct possible guesses for substitutions",
+  "known" : {
+    "_comment": "a dictionary a describing what mappings we know of in the substitution"
+  },
+  "negative_known": {
+    "_comment": "a dictionary a describing what mappings we know CAN't happen in the substitution"
+  },
+  "guess_codes": ["A list of codes we want to test"],
+  "guess_letters": ["A list of letters we think might align with these codes"]
+}

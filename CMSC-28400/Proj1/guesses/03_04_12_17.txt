@@ -1,0 +1,43 @@
+{
+    "083": ' ',  # There are lots of 083s
+    "969": '.',  # A lot of the time 969 is followed by 083. 969 comes at the end of the ctxt
+    "656": 'e',  # Educated guess, this was the most common letter
+    # Guesses
+    "126": 'l',  # 126126 was the most frequent digram
+    "495": 't',  # 495495 had a similar frequency to 'tt' in English
+    "981": 's',  # 981981 was a very common digram
+    "917": 'a',  # Earlier guessing indicates this is either 917 or 981.
+    # At this point I decoded a whole word: 'least'
+    "480": 'h',  # I see 't480e' alot
+    "654": 'i',  # Suggested guess
+    "860": 'w',  # Context
+    "421": 'o',  # Context and frequency
+    "316": 'r',  # Context and frequency
+    "855": 'y',  # Originally thought was 773
+    "946": 'n',  # Suggested guess
+    "119": 'c',  # Context and frequency
+    "058": 'p',  # Context
+    "899": 'd',  # Context
+    "877": 'g',  # Context
+    "038": 'u',  # Context
+    "691": 'b',  # Context
+    "733": 'm',  # Context
+    "386": 'f',  # Context
+    "465": 'v',  # Context
+    "613": ',',  # Context
+    "380": 'k',  # Context
+    "407": 'x',  # Context
+    "270": 'q',  # Context
+    "006": 'j',  # Context
+    "984": 'z',  # Context
+    "186": ":",  # Context
+    "456": "(",  # Context
+    "743": ")",  # Context
+    "646": "1",  # Context
+    "133": "2",  # Context
+    "630": "3",  # Context
+    "594": "4",  # Context
+    "176": "0",  # Guess/Context
+    "973": ";",  # Guess/Context
+    "617": "?"   # Context
+}

@@ -1,0 +1,9 @@
+mySumL [1..4]
+==> mySumL (enumFromTo 1 4)                 -- desugar
+==> mySumL.iter 0 (enumFromTo 1 4)          -- expand mySumL
+==> mySumL.iter 0 (1:enumFromTo 2 4)        -- expand mySumL.Iter and enumFromTo
+==> mySumL.iter (0+1) (2:enumFromTo 3 4)    -- expand mySumL.Iter and enumFromTo
+==> mySumL.iter (1+2) (3:enumFromTo 4 4)    -- expand mySumL.Iter and enumFromTo
+==> mySumL.iter (3+3) (4:[])                -- expand mySumL.Iter
+==> mySumL.iter (6+4) ([])                  -- expand mySumL.iter
+==> (10)                                    -- expand mySumL.iter via the [] case

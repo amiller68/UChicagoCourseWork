@@ -1,0 +1,7 @@
+There is no applicative for ((,) a) because
+while it is a functor, there is no applicative
+ purpose for it.
+ Meaning that while we could create an Applicative
+ instance of ((,) a), there is really no need to
+ becuase it is taken care of in other instances.
+ EIther that or maybe you just can store functions in applicatives
